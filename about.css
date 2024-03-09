@@ -1,0 +1,314 @@
+* {
+  font-family: "poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+
+:root {
+  --green: #27ae60;
+  --black: #2c2c54;
+}
+*::selection {
+  background: var(--green);
+  color: black;
+}
+html {
+  font-size: 62.5%;
+  /* overflow: scroll; */
+  scroll-padding-top: 6.7rem;
+  scroll-behavior: smooth;
+}
+
+.header-2 {
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 8.5%;
+  box-shadow: 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+.header-2 .navbar a {
+  padding: 0.5rem 1.5rem;
+  font-size: 2rem;
+  border-radius: 0.7rem;
+  color: var(--black);
+}
+.header-2 .navbar a:hover {
+  background: var(--green);
+  color: #fff;
+}
+.header-2 .icons a {
+  font-size: 2.5rem;
+  color: var(--black);
+  padding: 10px;
+  padding-left: 1rem;
+}
+.header-2 .icons a:hover {
+  color: var(--green);
+}
+
+.offer {
+  margin: 100px auto;
+  height: 600px;
+  width: 90%;
+  background-image: linear-gradient(
+      rgba(128, 233, 133, 0.315),
+      rgba(204, 206, 123, 0.7)
+    ),
+    url(https://img.freepik.com/premium-photo/male-hand-holding-small-shopping-cart-trolley-yellow-online-shopping-fast-delivery-concept_224798-741.jpg);
+  background-position: center;
+  background-size: cover;
+  border-radius: 10px;
+  text-align: left;
+  padding: 100px 0;
+}
+
+.offer h1 {
+  margin-top: 50px;
+  margin-left: 40px;
+  font-size: 40px;
+  font-family: cursive;
+  color: rgb(248, 241, 241);
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+.offer h1::first-letter {
+  font-size: 200%;
+  color: #263527;
+}
+.offer p {
+  /* flex-wrap: wrap; */
+  width: 40%;
+  margin-top: 20px;
+  margin-left: 40px;
+  font-size: 30px;
+  font-family: cursive;
+  color: #f8f8f8;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+.offer .btn {
+  margin-left: 40px;
+  background: #fff;
+  padding: 0.5rem 1.5rem;
+  font-size: 2rem;
+  border-radius: 0.7rem;
+  color: var(--black);
+
+  border: 0.5px solid rgb(223, 219, 219);
+}
+.offer .btn:hover {
+  background: var(--green);
+  color: rgb(230, 223, 225);
+}
+
+.offer1 {
+  margin: 100px auto;
+  height: 600px;
+  width: 90%;
+  background-image: linear-gradient(
+      rgba(128, 233, 133, 0.315),
+      rgba(204, 206, 123, 0.7)
+    ),
+    url(https://img.freepik.com/premium-photo/small-supermarket-grocery-push-cart-shopping-toy-with-wheels-isolated-yellow-colourful-trendy_80942-8246.jpg);
+  background-position: center;
+  background-size: cover;
+  border-radius: 10px;
+  text-align: right;
+  padding: 100px 0;
+}
+
+.offer1 h1 {
+  margin-top: 50px;
+  margin-right: 40px;
+  font-size: 40px;
+  font-family: cursive;
+  color: rgb(248, 241, 241);
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+.offer1 h1::first-letter {
+  font-size: 200%;
+  color: #263527;
+}
+
+.offer1 p {
+  margin-top: 20px;
+  color: #f8f8f8;
+  margin-left: 56%;
+  font-size: 30px;
+  font-family: cursive;
+  font-weight: 500;
+  margin-bottom: 20px;
+  width: 40%;
+}
+
+.offer1 .btn1 {
+  margin-right: 40px;
+  background: #fff;
+  padding: 0.5rem 1.5rem;
+  font-size: 2rem;
+  border-radius: 0.7rem;
+  color: var(--black);
+
+  border: 0.5px solid rgb(223, 219, 219);
+}
+.offer1 .btn1:hover {
+  background: var(--green);
+  color: rgb(230, 223, 225);
+}
+@media only screen and (max-width: 768px) {
+  .offer,
+  .offer1 {
+    height: auto;
+    text-align: center;
+  }
+  .offer h1,
+  .offer1 h1 {
+    font-size: 25px;
+    text-align: center;
+  }
+  .offer p,
+  .offer1 p {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .offer .btn,
+  .offer1 .btn1 {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+/* mobile toggle */
+
+#menu-bar {
+  font-size: 3rem;
+  border-radius: 0.5rem;
+  border: 0.1rem solid var(--black);
+  padding: 0.8rem 1.5rem;
+  color: var(--black);
+  cursor: pointer;
+  display: none;
+}
+@media (max-width: 1200px) {
+  html {
+    font-size: 55%;
+  }
+}
+@media (max-width: 991px) {
+  .header-1,
+  .header-2 {
+    padding: 2rem;
+  }
+}
+@media (max-width: 768px) {
+  #menu-bar {
+    display: initial;
+  }
+  .header-2 .navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--black);
+    padding: 1rem 2rem;
+    display: none;
+  }
+  .header-2 .navbar.active {
+    display: initial;
+    transition: 0.4s linear;
+  }
+  .header-2 .navbar a {
+    font-size: 2.5rem;
+    display: block;
+    text-align: center;
+    background: #fff;
+    padding: 1rem;
+    margin: 1.5rem;
+  }
+}
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+  .header-1 {
+    flex-flow: column;
+  }
+  .header-1 .search-box-container {
+    width: 100%;
+    margin-top: 2rem;
+  }
+  .logo {
+    font-size: 4rem;
+  }
+}
+.header-2.active {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10000;
+}
+
+.offers {
+  width: 90%;
+
+  margin: auto;
+  display: flex;
+}
+.offers-col {
+  position: relative;
+  height: 300px;
+  width: 45%;
+  margin: auto;
+  border: 0.5px solid rgb(236, 226, 226);
+}
+.offers-col img {
+  width: 100%;
+  height: 296px;
+}
+.offers-col .contents {
+  font-family: "Courier New", Courier, monospace;
+
+  position: absolute;
+  bottom: 0;
+  background: rgb(173, 159, 159);
+  background: rgba(99, 81, 81, 0.5);
+  color: #f1f1f1;
+  width: 100%;
+  padding: 40px;
+}
+.offers-col .contents p {
+  font-size: 15px;
+  font-weight: 300;
+}
+
+@media only screen and (max-width: 768px) {
+  .offers {
+    flex-wrap: wrap;
+  }
+
+  .offers-col {
+    width: 100%;
+    margin-bottom: 20px;
+    height: auto;
+  }
+
+  .offers-col img {
+    height: 200px;
+  }
+
+  .offers-col .contents {
+    padding: 20px;
+    position: relative;
+    height: auto;
+    opacity: 0.9;
+  }
+}

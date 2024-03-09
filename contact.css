@@ -1,0 +1,255 @@
+* {
+  font-family: "poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+body {
+  background: rgb(238, 191, 174);
+  background: linear-gradient(
+    338deg,
+    rgba(238, 191, 174, 1) 4%,
+    rgba(222, 210, 106, 1) 56%,
+    rgba(209, 238, 30, 1) 100%
+  );
+}
+:root {
+  --green: #27ae60;
+  --black: #2c2c54;
+}
+*::selection {
+  background: var(--green);
+  color: black;
+}
+html {
+  font-size: 62.5%;
+  /* overflow: scroll;
+  scroll-padding-top: 6.7rem;
+  scroll-behavior: smooth; */
+}
+
+.header-2 {
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 8.5%;
+  box-shadow: 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+.header-2 .navbar a {
+  padding: 0.5rem 1.5rem;
+  font-size: 2rem;
+  border-radius: 0.7rem;
+  color: var(--black);
+}
+.header-2 .navbar a:hover {
+  background: var(--green);
+  color: #fff;
+}
+.header-2 .icons a {
+  font-size: 2.5rem;
+  color: var(--black);
+  padding: 10px;
+  padding-left: 1rem;
+}
+.header-2 .icons a:hover {
+  color: var(--green);
+}
+
+.container {
+  /* height: 500px; */
+  /* width: 90%; */
+  margin: 100px auto;
+  padding-bottom: 90px;
+  /* border: 2px solid red; */
+
+  display: flex;
+}
+.col {
+  margin: auto;
+  background: #69b375;
+  height: 180px;
+  width: 19%;
+  border: 1px solid rgb(192, 176, 176);
+  margin-bottom: -150px;
+  -webkit-box-shadow: 1px 5px 31px 2px rgba(41, 92, 41, 0.78);
+  -moz-box-shadow: 1px 5px 31px 2px rgba(41, 92, 41, 0.78);
+  box-shadow: 1px 5px 31px 2px rgba(41, 92, 41, 0.78);
+  transition: 1s;
+}
+.col:hover {
+  transform: scale(1.08);
+}
+
+.col .icons {
+  margin: 10px auto;
+  text-align: center;
+  justify-content: center;
+
+  font-size: 35px;
+  color: #0b4624;
+}
+.icons h1 {
+  font-size: 20px;
+  color: #0e0f0f;
+  font-weight: 600;
+}
+.icons p {
+  font-size: 15px;
+}
+.container2 {
+  margin-left: 35%;
+  height: 400px;
+  width: 350px;
+  border: 1px solid rgb(133, 117, 117);
+  background: transparent;
+  margin-bottom: 50px;
+
+  -webkit-box-shadow: 1px 5px 31px 2px rgba(41, 92, 41, 0.78);
+  -moz-box-shadow: 1px 5px 31px 2px rgba(41, 92, 41, 0.78);
+  box-shadow: 1px 5px 31px 2px rgba(41, 92, 41, 0.78);
+}
+
+/* media query */
+@media only screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    margin: 50px auto;
+  }
+
+  .col {
+    width: 80%;
+    margin: 0 auto 50px;
+  }
+
+  .container2 {
+    margin: 0 auto;
+    margin-bottom: 50px;
+    width: 320px;
+  }
+}
+#form {
+  display: flex;
+  margin-top: 15px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.container2 h1 {
+  font-size: 25px;
+  color: #0da181;
+  margin-top: 45px;
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: 800;
+}
+
+#username,
+#email,
+textarea {
+  margin-top: 10px;
+  margin: 5px 0;
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  width: 90%;
+  max-width: 400px;
+}
+
+textarea {
+  resize: none;
+}
+
+.btn {
+  margin: 10px auto;
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #3e8e41;
+}
+
+input:invalid {
+  border-color: #d83030;
+}
+/* mobile toggle media query */
+
+#menu-bar {
+  font-size: 3rem;
+  border-radius: 0.5rem;
+  border: 0.1rem solid var(--black);
+  padding: 0.8rem 1.5rem;
+  color: var(--black);
+  cursor: pointer;
+  display: none;
+}
+@media (max-width: 1200px) {
+  html {
+    font-size: 55%;
+  }
+}
+@media (max-width: 991px) {
+  .header-1,
+  .header-2 {
+    padding: 2rem;
+  }
+}
+@media (max-width: 768px) {
+  #menu-bar {
+    display: initial;
+  }
+  .header-2 .navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--black);
+    padding: 1rem 2rem;
+    display: none;
+  }
+  .header-2 .navbar.active {
+    display: initial;
+    transition: 0.4s linear;
+  }
+  .header-2 .navbar a {
+    font-size: 2.5rem;
+    display: block;
+    text-align: center;
+    background: #fff;
+    padding: 1rem;
+    margin: 1.5rem;
+  }
+}
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+  .header-1 {
+    flex-flow: column;
+  }
+  .header-1 .search-box-container {
+    width: 100%;
+    margin-top: 2rem;
+  }
+  .logo {
+    font-size: 4rem;
+  }
+}
+.header-2.active {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10000;
+}
